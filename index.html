@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'Edicola Digitale - Progetto Scolastico</title>
+    <title>Archivio Storico: Il Disastro di Bhopal - Progetto Scolastico</title>
     <!-- Tailwind CSS per la grafica moderna -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons per le icone -->
@@ -44,7 +44,7 @@
             transform-origin: top left;
         }
 
-        /* Effetto 3D e Hover sulle copertine dei giornali */
+        /* Effetto 3D e Hover sulle copertine dei volumi */
         .newspaper-card {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transform-style: preserve-3d;
@@ -87,7 +87,7 @@
             100% { transform: rotateY(0deg); opacity: 1; }
         }
 
-        /* Stile carta stampata del giornale */
+        /* Stile carta stampata del documento */
         .newspaper-paper {
             background-color: #fcfbf7;
             background-image: radial-gradient(#e5e7eb 0.5px, transparent 0.5px);
@@ -101,86 +101,86 @@
 
     <!-- Intestazione principale dell'app -->
     <header class="text-center my-6">
-        <span class="bg-indigo-600/30 text-indigo-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full border border-indigo-500/30 mb-3 inline-block">
-            Progetto Scolastico Multimediale
+        <span class="bg-red-600/20 text-red-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full border border-red-500/30 mb-3 inline-block">
+            Dossier Storico & Ambientale • 1984
         </span>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 mb-2">
-            L'EDICOLA INFORMATIVA
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-amber-300 via-orange-300 to-red-400 mb-2">
+            IL DISASTRO DI BHOPAL
         </h1>
-        <p class="text-slate-400 max-w-xl mx-auto text-sm md:text-base">
-            Esplora lo scaffale digitale, seleziona un quotidiano e sfoglia le pagine interattive dell'articolo.
+        <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+            Esplora i tre volumi dell'inchiesta sulla più grave catastrofe chimica della storia: dalle cause tecniche alla notte del 3 dicembre 1984, fino alle conseguenze umane e ambientali.
         </p>
     </header>
 
-    <!-- Scaffale con i Giornali -->
+    <!-- Scaffale con i 3 Volumi -->
     <main class="w-full max-w-6xl mx-auto my-8">
         <div class="shelf p-6 md:p-10 rounded-2xl">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 
-                <!-- Giornale 1: Il Scienziato -->
+                <!-- Volume 1: Le Origini e lo Stabilimento -->
                 <div onclick="openNewspaper(0)" class="newspaper-card cursor-pointer group">
-                    <div class="bg-slate-100 rounded-lg p-5 text-slate-900 border-4 border-slate-300 shadow-xl relative overflow-hidden h-[380px] flex flex-col justify-between">
+                    <div class="bg-stone-100 rounded-lg p-5 text-slate-900 border-4 border-stone-300 shadow-xl relative overflow-hidden h-[390px] flex flex-col justify-between">
                         <div class="border-b-2 border-slate-900 pb-2 mb-2 text-center">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Edizione Straordinaria</span>
-                            <h2 class="serif font-black text-2xl tracking-tighter text-slate-900 uppercase">IL SCIENZIATO</h2>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-700">Volume I • Contesto & Cause</span>
+                            <h2 class="serif font-black text-2xl tracking-tighter text-slate-900 uppercase">LA FABBRICA</h2>
                         </div>
                         <div class="relative overflow-hidden rounded my-2 flex-1">
-                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Scienza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-3">
-                                <p class="text-white text-xs font-semibold leading-tight">L'Intelligenza Artificiale nel futuro</p>
+                            <img src="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=600&q=80" alt="Impianto Industriale" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-3">
+                                <p class="text-white text-xs font-semibold leading-tight">La Union Carbide e la chimica del Sevin in India</p>
                             </div>
                         </div>
                         <div class="text-[11px] text-slate-600 line-clamp-2">
-                            Scopri le ultime innovazioni tecnologiche e la rivoluzione del sapere umano...
+                            Dalla Rivoluzione Verde ai tagli alla sicurezza: perché l'impianto di Bhopal era una bomba a orologeria...
                         </div>
-                        <div class="mt-3 pt-2 border-t border-slate-300 flex justify-between items-center text-xs font-bold text-indigo-600">
-                            <span>SFOGLIA ORA</span>
+                        <div class="mt-3 pt-2 border-t border-slate-300 flex justify-between items-center text-xs font-bold text-amber-700">
+                            <span>LEGGI VOLUME I</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Giornale 2: Eco Pianeta -->
+                <!-- Volume 2: La Notte della Catastrofe -->
                 <div onclick="openNewspaper(1)" class="newspaper-card cursor-pointer group">
-                    <div class="bg-amber-50 rounded-lg p-5 text-slate-900 border-4 border-amber-200 shadow-xl relative overflow-hidden h-[380px] flex flex-col justify-between">
+                    <div class="bg-red-50 rounded-lg p-5 text-slate-900 border-4 border-red-200 shadow-xl relative overflow-hidden h-[390px] flex flex-col justify-between">
                         <div class="border-b-2 border-slate-900 pb-2 mb-2 text-center">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-amber-700">Cultura & Ambiente</span>
-                            <h2 class="serif font-black text-2xl tracking-tighter text-slate-900 uppercase">ECO PIANETA</h2>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-red-700">Volume II • Cronaca dell'Incidente</span>
+                            <h2 class="serif font-black text-2xl tracking-tighter text-slate-900 uppercase">LA NUBE TOSSICA</h2>
                         </div>
                         <div class="relative overflow-hidden rounded my-2 flex-1">
-                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Natura" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-3">
-                                <p class="text-white text-xs font-semibold leading-tight">Energie Rinnovabili: la sfida globale</p>
+                            <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=600&q=80" alt="Fumo industriale" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-3">
+                                <p class="text-white text-xs font-semibold leading-tight">3 Dicembre 1984: la fuga di isocianato di metile</p>
                             </div>
                         </div>
                         <div class="text-[11px] text-slate-600 line-clamp-2">
-                            Un viaggio alla scoperta delle strategie verdi per proteggere la biodiversità...
+                            La reazione chimica nel serbatoio E610, il guasto agli allarmi e la fuga di oltre 40 tonnellate di gas...
                         </div>
-                        <div class="mt-3 pt-2 border-t border-slate-300 flex justify-between items-center text-xs font-bold text-emerald-700">
-                            <span>SFOGLIA ORA</span>
+                        <div class="mt-3 pt-2 border-t border-slate-300 flex justify-between items-center text-xs font-bold text-red-700">
+                            <span>LEGGI VOLUME II</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Giornale 3: Cronache d'Arte -->
+                <!-- Volume 3: Conseguenze e Memoria -->
                 <div onclick="openNewspaper(2)" class="newspaper-card cursor-pointer group">
-                    <div class="bg-slate-100 rounded-lg p-5 text-slate-900 border-4 border-slate-300 shadow-xl relative overflow-hidden h-[380px] flex flex-col justify-between">
+                    <div class="bg-slate-100 rounded-lg p-5 text-slate-900 border-4 border-slate-300 shadow-xl relative overflow-hidden h-[390px] flex flex-col justify-between">
                         <div class="border-b-2 border-slate-900 pb-2 mb-2 text-center">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-red-600">Arte & Storia</span>
-                            <h2 class="serif font-black text-2xl tracking-tighter text-slate-900 uppercase">CRONACHE D'ARTE</h2>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-600">Volume III • Impatto & Giustizia</span>
+                            <h2 class="serif font-black text-2xl tracking-tighter text-slate-900 uppercase">LE CICATRICI</h2>
                         </div>
                         <div class="relative overflow-hidden rounded my-2 flex-1">
-                            <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80" alt="Arte" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-3">
-                                <p class="text-white text-xs font-semibold leading-tight">Il Rinascimento nei musei digitali</p>
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" alt="Giustizia e memoria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-3">
+                                <p class="text-white text-xs font-semibold leading-tight">Vittime, inquinamento e battaglie legali</p>
                             </div>
                         </div>
                         <div class="text-[11px] text-slate-600 line-clamp-2">
-                            Analisi dei capolavori classici reinterpretati attraverso la tecnologia...
+                            Le conseguenze sanitarie a lungo termine, la bonifica mancata e le lezioni sulla sicurezza industriale...
                         </div>
-                        <div class="mt-3 pt-2 border-t border-slate-300 flex justify-between items-center text-xs font-bold text-rose-600">
-                            <span>SFOGLIA ORA</span>
+                        <div class="mt-3 pt-2 border-t border-slate-300 flex justify-between items-center text-xs font-bold text-slate-800">
+                            <span>LEGGI VOLUME III</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </div>
                     </div>
@@ -198,19 +198,19 @@
             <i data-lucide="x" class="w-6 h-6"></i>
         </button>
 
-        <!-- Contenitore Giornale Aperto -->
+        <!-- Contenitore Volume Aperto -->
         <div id="modalContent" class="modal-enter newspaper-paper w-full max-w-3xl rounded-xl p-6 md:p-10 text-slate-900 relative shadow-2xl min-h-[550px] flex flex-col justify-between">
             
             <div>
                 <!-- Intestazione della pagina aperta -->
                 <div class="flex justify-between items-center border-b-2 border-slate-800 pb-3 mb-4">
                     <div>
-                        <span id="newspaperCategory" class="text-xs font-bold text-indigo-600 uppercase tracking-widest"></span>
+                        <span id="newspaperCategory" class="text-xs font-bold text-red-700 uppercase tracking-widest"></span>
                         <h2 id="newspaperTitle" class="serif font-black text-3xl md:text-4xl text-slate-900 tracking-tight"></h2>
                     </div>
                     <div class="text-right">
-                        <span class="text-xs text-slate-500 block">Edizione Digitale</span>
-                        <span class="text-sm font-semibold text-slate-700">2026</span>
+                        <span class="text-xs text-slate-500 block">Archivio Storico</span>
+                        <span class="text-sm font-semibold text-slate-700">Bhopal, 1984</span>
                     </div>
                 </div>
 
@@ -218,16 +218,16 @@
                 <div id="pageAnimatedArea" class="transition-all duration-300">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-4">
                         <div class="rounded-lg overflow-hidden h-48 shadow-md">
-                            <img id="pageImage" src="" alt="Foto Articolo" class="w-full h-full object-cover">
+                            <img id="pageImage" src="" alt="Foto Documentario" class="w-full h-full object-cover">
                         </div>
                         <div class="flex flex-col justify-center">
                             <h3 id="articleTitle" class="serif font-bold text-xl mb-2 text-slate-800"></h3>
-                            <p id="articleSummary" class="text-xs text-slate-600 leading-relaxed italic border-l-2 border-indigo-500 pl-3 mb-3"></p>
+                            <p id="articleSummary" class="text-xs text-slate-600 leading-relaxed italic border-l-2 border-red-600 pl-3 mb-3"></p>
                         </div>
                     </div>
 
                     <div class="mt-4 border-t border-slate-200 pt-4">
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Argomenti Chiave:</h4>
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Parole Chiave & Tag:</h4>
                         <div id="topicsList" class="flex flex-wrap gap-2 mb-4"></div>
                         <p id="pageContent" class="serif text-sm leading-relaxed text-slate-700 text-justify"></p>
                     </div>
@@ -244,7 +244,7 @@
                     Pagina <span id="currentPageNum" class="text-slate-900 font-extrabold">1</span> di <span id="totalPagesNum">3</span>
                 </div>
 
-                <button id="nextBtn" onclick="changePage(1)" class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-xs font-bold transition disabled:opacity-30 disabled:cursor-not-allowed">
+                <button id="nextBtn" onclick="changePage(1)" class="flex items-center gap-2 bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-lg text-xs font-bold transition disabled:opacity-30 disabled:cursor-not-allowed">
                     Pagina Successiva <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </button>
             </div>
@@ -258,83 +258,83 @@
 
         const newspapersData = [
             {
-                title: "IL SCIENZIATO",
-                category: "Tecnologia & Futuro",
+                title: "VOL. I: LA FABBRICA",
+                category: "Contesto Storico & Cause Tecniche",
                 pages: [
                     {
-                        title: "L'Intelligenza Artificiale a Scuola",
-                        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
-                        summary: "Come gli algoritmi e il machine learning stanno trasformando la didattica moderna.",
-                        topics: ["Informatica", "Didattica", "Innovazione"],
-                        content: "L'integrazione delle moderne tecnologie nell'ambito scolastico offre strumenti personalizzati per ogni studente. La capacità di adattare i programmi di studio in tempo reale permette di colmare le lacune individuali e stimolare le eccellenze in modo dinamico e inclusivo."
+                        title: "La Union Carbide e la Rivoluzione Verde",
+                        image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=600&q=80",
+                        summary: "Alla fine degli anni '60 l'India puntava all'autosufficienza agricola incentivando la produzione locale di pesticidi.",
+                        topics: ["Union Carbide", "India 1969", "Pesticida Sevin", "Industrializzazione"],
+                        content: "Nel 1969 la multinazionale statunitense Union Carbide inaugurò a Bhopal, nel Madhya Pradesh, uno stabilimento per produrre il pesticida Sevin (carbaryl). Inizialmente accolto come simbolo di progresso economico e sostegno all'agricoltura indiana, l'impianto sorgeva in una zona densamente popolata, circondato da quartieri operai e baraccopoli cresciute rapidamente attorno alla fabbrica."
                     },
                     {
-                        title: "L'Esplorazione di Marte",
-                        image: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=600&q=80",
-                        summary: "Nuove scoperte sui campioni minerari raccolti dai rover spaziali.",
-                        topics: ["Spazio", "Astronomia", "Rover"],
-                        content: "I dati inviati dai rover in orbita marziana indicano la presenza passata di bacini d'acqua salata. Questo apre nuove ed entusiasmanti ipotesi scientifiche sulla possibilità di vita microbica ancestrale e la futura colonizzazione umana."
+                        title: "L'Isocianato di Metile (MIC)",
+                        image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80",
+                        summary: "Un composto chimico estremamente volatile, infiammabile e letale anche a basse concentrazioni.",
+                        topics: ["Chimica", "Isocianato di Metile", "Stoccaggio", "Rischio Industriale"],
+                        content: "Per ridurre i costi di produzione, l'azienda decise di sintetizzare e stoccare in loco enormi quantità di isocianato di metile (MIC), un liquido incolore più pesante dell'aria. Il MIC reagisce violentemente con l'acqua generando calore e gas tossici. A differenza degli impianti europei o americani, a Bhopal venivano conservate decine di tonnellate di sostanza in tre grandi cisterne sotterranee."
                     },
                     {
-                        title: "La Fisica dei Quanti Spiegata",
-                        image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600&q=80",
-                        summary: "Un viaggio visivo nei concetti fondamentali della meccanica quantistica.",
-                        topics: ["Fisica", "Atomi", "Ricerca"],
-                        content: "Dall'entanglement quantistico al calcolo computazionale d'avanguardia: i quanti stanno rivoluzionando non solo la nostra comprensione dell'universo, ma anche la sicurezza informatica e la crittografia."
+                        title: "Tagli ai Costi e Sicurezza Compromessa",
+                        image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80",
+                        summary: "La crisi delle vendite nei primi anni '80 portò alla disattivazione dei sistemi di emergenza.",
+                        topics: ["Negligenza", "Manutenzione", "Sistemi Spenti", "Allarmi Inascoltati"],
+                        content: "A causa dei raccolti scarsi e del calo della domanda di pesticidi, lo stabilimento operava in perdita. La direzione ridusse il personale specializzato, allungò gli intervalli di manutenzione e spense dispositivi vitali: il sistema di refrigerazione dei serbatoi era disattivato per risparmiare energia elettrica, mentre la torre di lavaggio dei gas e la torcia di combustione erano fuori servizio."
                     }
                 ]
             },
             {
-                title: "ECO PIANETA",
-                category: "Ambiente & Ecologia",
+                title: "VOL. II: LA NUBE TOSSICA",
+                category: "Cronaca del 2-3 Dicembre 1984",
                 pages: [
                     {
-                        title: "Energie Rinnovabili Oggi",
-                        image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80",
-                        summary: "Pannelli solari trasparenti e pale eoliche di nuova generazione.",
-                        topics: ["Sostenibilità", "Solare", "Ecologia"],
-                        content: "La transizione verso fonti energetiche totalmente pulite ha raggiunto una pietra miliare. Grazie a nuovi materiali come le perovskiti, l'efficienza dei moduli fotovoltaici è raddoppiata negli ultimi anni."
+                        title: "L'Infiltrazione d'Acqua nel Serbatoio E610",
+                        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
+                        summary: "Durante un lavaggio delle tubature, l'acqua entrò in contatto con 42 tonnellate di MIC.",
+                        topics: ["Serbatoio E610", "Reazione Esotermica", "Errore Umano", "Pressione Critica"],
+                        content: "Nella tarda serata del 2 dicembre 1984, durante una normale operazione di pulizia delle condutture priva delle necessarie flange di isolamento, una grande quantità d'acqua penetrò nel serbatoio E610. Il contatto con l'isocianato di metile innescò una reazione chimica esotermica incontrollabile: la temperatura superò i 200 °C e la pressione interna fece saltare le valvole di sicurezza."
                     },
                     {
-                        title: "Proteggere la Biodiversità Marina",
-                        image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80",
-                        summary: "Progetti internazionali per il ripristino delle barriere coralline.",
-                        topics: ["Oceani", "Natura", "Fauna"],
-                        content: "Gli oceani regolano il clima del nostro pianeta. Progetti d'avanguardia stanno ripopolando i fondali marini con barriere artificiali ecocompatibili per proteggere la fauna dall'inquinamento da plastica."
+                        title: "La Fuga del Gas nella Notte",
+                        image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=600&q=80",
+                        summary: "Poco dopo la mezzanotte, oltre 40 tonnellate di gas letale si riversarono sulla città addormentata.",
+                        topics: ["3 Dicembre 1984", "Nube Letale", "Emergenza", "Evacuazione"],
+                        content: "Intorno alle 00:30 del 3 dicembre, una densa nube bianca di gas tossici fuoriuscì dallo sfiato dell'impianto. Essendo più pesante dell'aria, la nube rimase bassa al suolo, spinta dal vento verso i quartieri popolari di Bhopal. La sirena d'allarme della fabbrica fu attivata in ritardo e poi spenta per non creare panico, lasciando centinaia di migliaia di abitanti ignari del pericolo."
                     },
                     {
-                        title: "Città Verdi del Futuro",
-                        image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=600&q=80",
-                        summary: "Architettura bioclimatica e foreste urbane per abbattere la CO2.",
-                        topics: ["Urbanistica", "Architettura", "Verde"],
-                        content: "Integrazione di boschi verticali, tetti verdi e trasporti elettrici ad emissioni zero: ecco come le metropoli moderne stanno riducendo l'impronta ecologica e migliorando la salute dei cittadini."
+                        title: "Il Caos negli Ospedali",
+                        image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80",
+                        summary: "Migliaia di persone si riversarono nelle strade soffocando, mentre i medici ignoravano la natura del veleno.",
+                        topics: ["Emergenza Sanitaria", "Vittime", "Intossicazione", "Soccorsi"],
+                        content: "Gli abitanti si svegliarono con forti bruciori agli occhi, tosse violenta, vomito e difficoltà respiratorie. Migliaia morirono nel sonno o mentre cercavano di fuggire a piedi. Gli ospedali di Bhopal furono travolti da decine di migliaia di pazienti: l'azienda non fornì subito informazioni sulla composizione chimica della nube né sugli antidoti, rendendo drammaticamente difficoltosi i primi soccorsi."
                     }
                 ]
             },
             {
-                title: "CRONACHE D'ARTE",
-                category: "Cultura & Rinascimento",
+                title: "VOL. III: LE CICATRICI",
+                category: "Conseguenze, Ambiente & Giustizia",
                 pages: [
                     {
-                        title: "I Segreti del Rinascimento",
-                        image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=600&q=80",
-                        summary: "Come le tecniche dei grandi maestri rivivono attraverso l'analisi digitale.",
-                        topics: ["Pittura", "Storia", "Firenze"],
-                        content: "I capolavori di Leonardo e Michelangelo analizzati con riflettografia a raggi infrarossi svelano disegni preparatori mai visti prima, rivelando i dettagli del processo creativo rinascimentale."
+                        title: "Il Bilancio Umano e Sanitario",
+                        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
+                        summary: "Oltre mezzo milione di persone esposte e conseguenze genetiche e croniche per decenni.",
+                        topics: ["Bilancio Vittime", "Salute Pubblica", "Danni Permanenti", "Diritti Umani"],
+                        content: "Le stime ufficiali parlano di circa 3.800 morti nei primi giorni, ma studi indipendenti stimano tra i 15.000 e i 20.000 decessi negli anni successivi. Oltre 500.000 persone furono esposte ai gas: decine di migliaia riportarono cecità permanente, gravi patologie polmonari, danni neurologici e malformazioni congenite trasmesse alle generazioni successive."
                     },
                     {
-                        title: "La Scultura e la Luce",
-                        image: "https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=600&q=80",
-                        summary: "L'uso del marmo e le ombre nella scultura classica e contemporanea.",
-                        topics: ["Scultura", "Marmo", "Arte"],
-                        content: "La scultura non è solo forma, ma costante dialogo con la luce. Un'esposizione interattiva mostra come il blocco di marmo grezzo prende vita sotto il cespello degli artisti."
+                        title: "Inquinamento delle Falde e Abbandono",
+                        image: "https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?auto=format&fit=crop&w=600&q=80",
+                        summary: "Il sito industriale non è mai stato bonificato, contaminando l'acqua potabile dei quartieri vicini.",
+                        topics: ["Inquinamento", "Falde Acquifere", "Rifiuti Tossici", "Bonifica Mancata"],
+                        content: "Dopo la tragedia lo stabilimento fu chiuso e abbandonato, lasciando all'aperto centinaia di tonnellate di scorie chimiche, pesticidi e metalli pesanti. Con le piogge monsoniche, le sostanze tossiche sono penetrate nel terreno contaminando le falde acquifere da cui ancora oggi attingono migliaia di residenti delle aree circostanti."
                     },
                     {
-                        title: "Musei e Realtà Virtuale",
-                        image: "https://images.unsplash.com/photo-1566127444979-b3d2b654e3d7?auto=format&fit=crop&w=600&q=80",
-                        summary: "Visitare le gallerie d'arte di tutto il mondo comodamente da casa.",
-                        topics: ["Digital Art", "Musei", "Tecnologia"],
-                        content: "La digitalizzazione in altissima definizione permette di osservare ogni singola pennellata da remoto. Un'opportunità democratica per diffondere la bellezza e l'istruzione in ogni angolo della terra."
+                        title: "Processi Legali e Lezioni per il Futuro",
+                        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80",
+                        summary: "Un risarcimento giudicato insufficiente e la nascita di nuove normative sulla sicurezza industriale.",
+                        topics: ["Giustizia", "Risarcimenti", "Sicurezza Sul Lavoro", "Memoria Storica"],
+                        content: "Nel 1989 la Union Carbide accettò di versare al governo indiano 470 milioni di dollari come risarcimento definitivo, una cifra ritenuta del tutto inadeguata dalle associazioni delle vittime. Il disastro di Bhopal rimane un monito globale sull'etica delle multinazionali e ha spinto molti Paesi a rafforzare le leggi sul controllo dei rischi industriali e sul diritto dei cittadini all'informazione."
                     }
                 ]
             }
@@ -390,8 +390,8 @@
             topicsContainer.innerHTML = '';
             page.topics.forEach(topic => {
                 const tag = document.createElement('span');
-                tag.className = 'bg-slate-200 text-slate-800 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md';
-                tag.innerText = topic;
+                tag.className = 'bg-red-100 text-red-900 border border-red-200 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md';
+                tag.innerText = '#' + topic;
                 topicsContainer.appendChild(tag);
             });
 
