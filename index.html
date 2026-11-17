@@ -113,8 +113,8 @@
     </header>
 
     <!-- Scaffale con i 3 Volumi -->
-    <main class="w-full max-w-6xl mx-auto my-8">
-        <div class="shelf p-6 md:p-10 rounded-2xl">
+    <main class="w-full max-w-6xl mx-auto my-8 flex flex-col items-center">
+        <div class="shelf p-6 md:p-10 rounded-2xl w-full">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 
                 <!-- Volume 1: Le Origini e lo Stabilimento -->
@@ -186,6 +186,92 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+
+        <!-- ACCORDION / BOTTONE FONTI A SCOMPARSA -->
+        <div class="w-full mt-6">
+            <button onclick="toggleSources()" class="w-full bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 text-slate-300 py-3 px-6 rounded-xl flex items-center justify-between transition shadow-lg group">
+                <div class="flex items-center gap-3">
+                    <div class="bg-red-600/20 p-2 rounded-lg text-red-400 group-hover:bg-red-600/30 transition">
+                        <i data-lucide="book-open" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-semibold text-sm md:text-base text-white">Fonti e Riferimenti Storici</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-slate-400">
+                    <span id="sourcesToggleText">Mostra fonti</span>
+                    <i id="sourcesChevron" data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300"></i>
+                </div>
+            </button>
+
+            <!-- Contenuto delle Fonti (Nascosto di default) -->
+            <div id="sourcesContent" class="hidden mt-3 p-6 md:p-8 bg-slate-900/80 backdrop-blur-md rounded-2xl border border-slate-700/50 text-slate-300 shadow-xl transition-all duration-300">
+                <div class="border-b border-slate-700 pb-4 mb-6 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Documentazione Ufficiale</span>
+                        <h3 class="serif font-bold text-xl md:text-2xl text-white">Bibliografia & Archivi</h3>
+                    </div>
+                    <span class="text-xs bg-slate-800 text-slate-400 px-3 py-1 rounded-full border border-slate-700">Dossier Bhopal 1984</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs md:text-sm">
+                    
+                    <!-- Categoria 1: Inchieste e Libri -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/60 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-amber-400 font-bold">
+                                <i data-lucide="book" class="w-4 h-4"></i>
+                                <span>Inchieste e Libri</span>
+                            </div>
+                            <ul class="space-y-3 text-slate-400">
+                                <li><strong class="text-slate-200">Lapierre, Dominique & Moro, Javier:</strong> <em>"Mezzanotte a Bhopal"</em> (Mondadori). Il racconto-inchiesta definitivo sulla tragedia.</li>
+                                <li><strong class="text-slate-200">The Bhopal Medical Appeal:</strong> Archivi storici e report medico-sanitari sulle vittime a lungo termine.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 pt-2 border-t border-slate-700/60 text-[11px] text-slate-500">
+                            Testi di riferimento storiografico
+                        </div>
+                    </div>
+
+                    <!-- Categoria 2: Report Istituzionali -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/60 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-red-400 font-bold">
+                                <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                                <span>Report Istituzionali</span>
+                            </div>
+                            <ul class="space-y-3 text-slate-400">
+                                <li><strong class="text-slate-200">Amnesty International:</strong> <em>"Clouds of Injustice"</em> – Rapporto ufficiale sulle responsabilità aziendali e governative.</li>
+                                <li><strong class="text-slate-200">Greenpeace International:</strong> Analisi chimiche sulla contaminazione persistente delle falde acquifere.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 pt-2 border-t border-slate-700/60 text-[11px] text-slate-500">
+                            Documentazione diritti umani e ambiente
+                        </div>
+                    </div>
+
+                    <!-- Categoria 3: Archivi e Media -->
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/60 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2 text-indigo-400 font-bold">
+                                <i data-lucide="film" class="w-4 h-4"></i>
+                                <span>Archivi e Media</span>
+                            </div>
+                            <ul class="space-y-3 text-slate-400">
+                                <li><strong class="text-slate-200">BBC Archives:</strong> Copertura giornalistica e telegiornali storici del dicembre 1984.</li>
+                                <li><strong class="text-slate-200">Unsplash Open Media:</strong> Immagini di repertorio e illustrazioni concettuali utilizzate per il progetto scolastico.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 pt-2 border-t border-slate-700/60 text-[11px] text-slate-500">
+                            Materiale visivo e sonoro
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-slate-800 text-center text-xs text-slate-500">
+                    Progetto Scolastico Multimediale realizzato a scopo didattico e di sensibilizzazione sulla sicurezza industriale e ambientale.
+                </div>
             </div>
         </div>
     </main>
@@ -290,7 +376,7 @@
                 pages: [
                     {
                         title: "L'Infiltrazione d'Acqua nel Serbatoio E610",
-                        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
+                        image: "https://images.unsplash.com/photo-1584282543579-630a3e5c9b68?auto=format&fit=crop&w=600&q=80",
                         summary: "Durante un lavaggio delle tubature, l'acqua entrò in contatto con 42 tonnellate di MIC.",
                         topics: ["Serbatoio E610", "Reazione Esotermica", "Errore Umano", "Pressione Critica"],
                         content: "Nella tarda serata del 2 dicembre 1984, durante una normale operazione di pulizia delle condutture priva delle necessarie flange di isolamento, una grande quantità d'acqua penetrò nel serbatoio E610. Il contatto con l'isocianato di metile innescò una reazione chimica esotermica incontrollabile: la temperatura superò i 200 °C e la pressione interna fece saltare le valvole di sicurezza."
@@ -317,7 +403,7 @@
                 pages: [
                     {
                         title: "Il Bilancio Umano e Sanitario",
-                        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
+                        image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb9?auto=format&fit=crop&w=600&q=80",
                         summary: "Oltre mezzo milione di persone esposte e conseguenze genetiche e croniche per decenni.",
                         topics: ["Bilancio Vittime", "Salute Pubblica", "Danni Permanenti", "Diritti Umani"],
                         content: "Le stime ufficiali parlano di circa 3.800 morti nei primi giorni, ma studi indipendenti stimano tra i 15.000 e i 20.000 decessi negli anni successivi. Oltre 500.000 persone furono esposte ai gas: decine di migliaia riportarono cecità permanente, gravi patologie polmonari, danni neurologici e malformazioni congenite trasmesse alle generazioni successive."
@@ -331,7 +417,7 @@
                     },
                     {
                         title: "Processi Legali e Lezioni per il Futuro",
-                        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80",
+                        image: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=600&q=80",
                         summary: "Un risarcimento giudicato insufficiente e la nascita di nuove normative sulla sicurezza industriale.",
                         topics: ["Giustizia", "Risarcimenti", "Sicurezza Sul Lavoro", "Memoria Storica"],
                         content: "Nel 1989 la Union Carbide accettò di versare al governo indiano 470 milioni di dollari come risarcimento definitivo, una cifra ritenuta del tutto inadeguata dalle associazioni delle vittime. Il disastro di Bhopal rimane un monito globale sull'etica delle multinazionali e ha spinto molti Paesi a rafforzare le leggi sul controllo dei rischi industriali e sul diritto dei cittadini all'informazione."
@@ -357,6 +443,22 @@
 
         function closeModal() {
             document.getElementById('modal').classList.add('hidden');
+        }
+
+        function toggleSources() {
+            const content = document.getElementById('sourcesContent');
+            const chevron = document.getElementById('sourcesChevron');
+            const toggleText = document.getElementById('sourcesToggleText');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                chevron.style.transform = 'rotate(180deg)';
+                toggleText.innerText = 'Nascondi fonti';
+            } else {
+                content.classList.add('hidden');
+                chevron.style.transform = 'rotate(0deg)';
+                toggleText.innerText = 'Mostra fonti';
+            }
         }
 
         function changePage(direction) {
